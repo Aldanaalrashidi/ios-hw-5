@@ -40,9 +40,11 @@ class PlayerDetailsVC: UIViewController {
         let url = URL(fileURLWithPath: path)
         
         do{
+            
             playerSoundEffect = try AVAudioPlayer(contentsOf: url)
             playerSoundEffect?.play()
         }catch{
+            
             // couldn't load file
         }
     }
